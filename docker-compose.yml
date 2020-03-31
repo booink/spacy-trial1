@@ -1,0 +1,10 @@
+version: '3'
+services:
+  spacy_trial1:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - 8001:8000
+    command: jupyter notebook --port 8000 --ip=0.0.0.0 --allow-root
